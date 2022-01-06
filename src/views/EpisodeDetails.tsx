@@ -5,12 +5,9 @@ import styled from "styled-components";
 import { useSelectorTyped } from "../hooks/useSelectorTyped";
 import { Row, Col } from "antd";
 
-const EpisodeDetails = () => {
-  const episode = useSelectorTyped((state) => state.episode);
-
-  // CSS-in-JS styles using styled-components & inline styles
-  // One breakpoint used in order to develop responsivity
-  const ImgDiv = styled.div`
+// CSS-in-JS styles using styled-components & inline styles
+// One breakpoint used in order to develop responsivity
+const ImgDiv = styled.div`
     & {
       width: 100%;
       height: 100%;
@@ -21,6 +18,8 @@ const EpisodeDetails = () => {
         width: 100%;
       }
   `;
+const EpisodeDetails = () => {
+  const episode = useSelectorTyped((state) => state.episode);
 
   return (
     <>

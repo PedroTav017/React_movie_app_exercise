@@ -7,16 +7,16 @@ import AppRouter from "./routes/AppRouter";
 
 const { Header, Footer, Content } = Layout;
 
-function App() {
-  // CSS-in-JS styles using styled-components & inline styles
-  const ContentDiv = styled.div`
-    padding: 50px;
-    min-height: calc(100vh - (68px * 2));
-    @media (max-width: 768px) {
-      padding: 20px;
-    }
-  `;
+// CSS-in-JS styles using styled-components & inline styles
+const ContentDiv = styled.div`
+  padding: 50px;
+  min-height: calc(100vh - (68px * 2));
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+`;
 
+function App() {
   return (
     <div>
       <Layout>

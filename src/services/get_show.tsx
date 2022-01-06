@@ -1,4 +1,11 @@
-const get_show = (id: number, showHandler: any) => {
+// initialShowStateType
+type initShowState = {
+  name: string;
+  summary: string;
+  image: { medium: string; original: string };
+};
+
+const get_show = (id: number, showHandler: (data: initShowState) => void) => {
   fetch("https://api.tvmaze.com/shows/" + id)
     .then((response) => {
       if (!response.ok || response.status !== 200) {

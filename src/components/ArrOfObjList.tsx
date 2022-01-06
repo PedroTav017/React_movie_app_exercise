@@ -6,7 +6,11 @@ import "antd/dist/antd.css";
 
 // list must recieve a dataset of type array (objects with name property)
 // optional action and url props
-const ArrOfObjList = (props: { data: []; action?: any; url?: string }) => {
+const ArrOfObjList = (props: {
+  data: [];
+  action?: React.MouseEventHandler<HTMLButtonElement>;
+  url?: string;
+}) => {
   const list = props.data.map((item: any, id: any) => (
     <List.Item key={id}>
       {props.url ? (
