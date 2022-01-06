@@ -35,14 +35,27 @@ const ShowDetails = () => {
   }, [showID, showEpisodes]);
 
   // CSS-in-JS styles using styled-components & inline styles
+  // One breakpoint used in order to develop responsivity
   const DetailsDiv = styled.div`
     & {
       display: flex;
       align-items: center;
       margin-bottom: 20px;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+    & img {
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
     & .infoHolder {
       margin-left: 40px;
+      @media (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
     }
   `;
 
@@ -55,7 +68,7 @@ const ShowDetails = () => {
       background-color: #0b345c;
     }
     & li a {
-      color: white
+      color: white;
     }
   `;
 

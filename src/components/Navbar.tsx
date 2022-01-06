@@ -4,11 +4,9 @@ import styled from "styled-components";
 
 // CSS-in-JS styles using styled-components & inline styles
 const NavDiv = styled.div`
-  & {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-  }
+  color: white;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Navbar = () => {
