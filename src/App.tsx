@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// components
+import Navbar from "./components/Navbar";
+import { Layout } from "antd";
+// routes
+import AppRouter from "./routes/AppRouter";
+
+const { Header, Footer, Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <Layout>
+        <Header>
+          <Navbar />
+        </Header>
+        <Content
+          style={{ padding: "50px", minHeight: "calc(100vh - (68px * 2))" }}
         >
-          Learn React
-        </a>
-      </header>
+          <AppRouter />
+        </Content>
+        <Footer>
+          <small>React Application Exercise - Pedro Tavares</small>
+        </Footer>
+      </Layout>
     </div>
   );
 }
