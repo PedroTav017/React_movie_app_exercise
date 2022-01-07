@@ -5,6 +5,7 @@ type initShowState = {
   image: { medium: string; original: string };
 };
 
+// get show details using a show id and a handler to hold show details in an outer state
 const get_show = (id: number, showHandler: (data: initShowState) => void) => {
   fetch("https://api.tvmaze.com/shows/" + id)
     .then((response) => {

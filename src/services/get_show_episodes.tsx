@@ -1,3 +1,4 @@
+// get list of show episodes using a show id and a handler to hold episodes in a outer state
 const get_show_episodes = (id: number, showEpisodesHandler: (data: []) => void) => {
   fetch("https://api.tvmaze.com/shows/" + id + "/episodes")
     .then((response) => {
