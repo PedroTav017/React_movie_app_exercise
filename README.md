@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 This exercise was made using React and Typescript along with other notable packages such as Redux, React router, etc
+Heroku live build - https://ancient-ridge-98314.herokuapp.com/show
+github project url - https://github.com/PedroTav017/React_movie_app_exercise
 
 ## Available Scripts
 
